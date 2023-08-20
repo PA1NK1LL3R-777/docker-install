@@ -23,7 +23,7 @@ docker run -d -p 9000:9000 --name portainer --restart=always -v /var/run/docker.
 
 # Function to get IP address 
 get_ip() {
-  ip=$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
+  ip=$(ip addr show enp1s0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
   echo $ip
 }
 
